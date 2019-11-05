@@ -1,4 +1,4 @@
-package com.agustin.prcticointegrador_apirest;
+package com.agustin.prcticointegrador_apirest.Vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.agustin.prcticointegrador_apirest.R;
 
 public class MainActivity extends AppCompatActivity {
 

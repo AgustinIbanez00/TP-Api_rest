@@ -15,6 +15,8 @@ public class ResultadosMuseos {
 
     public ArrayList<Museo> devolverResultado(String parametro){
         ArrayList<Museo> resultado= new ArrayList<Museo>();
+
+
         return resultado;
     }
 
