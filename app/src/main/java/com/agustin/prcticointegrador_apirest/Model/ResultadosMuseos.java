@@ -2,16 +2,21 @@ package com.agustin.prcticointegrador_apirest.Model;
 
 import java.util.ArrayList;
 
-public class ListaMuseos {
+public class ResultadosMuseos {
 
     private int count;
     private ArrayList<Museo> museos;
 
-    public ListaMuseos(int count, ArrayList<Museo> museos) {
+    public ResultadosMuseos(int count, ArrayList<Museo> museos) {
         this.count = count;
         this.museos = museos;
     }
-    public ListaMuseos(){}
+    public ResultadosMuseos(){}
+
+    public ArrayList<Museo> devolverResultado(String parametro){
+        ArrayList<Museo> resultado= new ArrayList<Museo>();
+        return resultado;
+    }
 
     public int getCount() {
         return count;
