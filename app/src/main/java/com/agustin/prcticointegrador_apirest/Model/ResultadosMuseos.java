@@ -5,15 +5,16 @@ import java.util.ArrayList;
 public class ResultadosMuseos {
 
     private int count;
-    private ArrayList<Museo> museos;
+    private ArrayList<Museo> results;
+    private String next;
+    private String previous;
 
-    public ResultadosMuseos(int count, ArrayList<Museo> museos) {
+    public ResultadosMuseos(int count, ArrayList<Museo> results, String next, String previous) {
         this.count = count;
-        this.museos = museos;
+        this.results = results;
+        this.next = next;
+        this.previous = previous;
     }
-    public ResultadosMuseos(){}
-
-
 
     public int getCount() {
         return count;
@@ -23,11 +24,27 @@ public class ResultadosMuseos {
         this.count = count;
     }
 
-    public ArrayList<Museo> getMuseos() {
-        return museos;
+    public ArrayList<Museo> getResults() {
+        return results;
     }
 
-    public void setMuseos(ArrayList<Museo> museos) {
-        this.museos = museos;
+    public void setResults(ArrayList<Museo> results) {
+        this.results = results;
+    }
+
+    public String getNext() {
+        return next;
+    }
+
+    public void setNext(String next) {
+        this.next = next;
+    }
+
+    public String getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(String previous) {
+        this.previous = previous;
     }
 }

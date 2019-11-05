@@ -12,9 +12,9 @@ public class Museo {
    private String email;
    private String provincia;
    private String depende_de;
-   private String autoridad;
+   private Autoridad autoridad;
 
-    public Museo(int id, String url, String link, String nombre, String direccion, String telefono, String descripcion, String email, String provincia, String depende_de, String autoridad) {
+    public Museo(int id, String url, String link, String nombre, String direccion, String telefono, String descripcion, String email, String provincia, String depende_de, Autoridad autoridad) {
         this.id = id;
         this.url = url;
         this.link = link;
@@ -27,8 +27,6 @@ public class Museo {
         this.depende_de = depende_de;
         this.autoridad = autoridad;
     }
-
-    public Museo(){}
 
     public int getId() {
         return id;
@@ -110,11 +108,11 @@ public class Museo {
         this.depende_de = depende_de;
     }
 
-    public String getAutoridad() {
+    public Autoridad getAutoridad() {
         return autoridad;
     }
 
-    public void setAutoridad(String autoridad) {
+    public void setAutoridad(Autoridad autoridad) {
         this.autoridad = autoridad;
     }
 }

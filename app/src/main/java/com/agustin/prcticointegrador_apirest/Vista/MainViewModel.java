@@ -1,5 +1,7 @@
 package com.agustin.prcticointegrador_apirest.Vista;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -36,14 +38,14 @@ public class MainViewModel extends ViewModel {
              public void onResponse(Call<ResultadosMuseos> call, Response<ResultadosMuseos> response) {
                  if(response.isSuccessful()){
                      ResultadosMuseos result=response.body();
-                     listaMuseo.postValue(response.body().getMuseos());
+                     listaMuseo.postValue(response.body().getResults());
 
                  }
              }
 
              @Override
              public void onFailure(Call<ResultadosMuseos> call, Throwable t) {
-
+                 Log.d("mensaje_error", t.getMessage());
              }
          });
 

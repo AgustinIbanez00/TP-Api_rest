@@ -20,15 +20,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre del museo" />
+        android:text="museo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnBuscar"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="buscar"
         android:text="Buscar" />
 
     <ListView
