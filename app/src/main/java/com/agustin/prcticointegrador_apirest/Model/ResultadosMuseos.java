@@ -13,19 +13,7 @@ public class ResultadosMuseos {
     }
     public ResultadosMuseos(){}
 
-    public ArrayList<Museo> devolverResultado(String parametro){
-        ArrayList<Museo> resultado= new ArrayList<Museo>();
 
-        for (Museo it: museos ){
-
-            if (it.getNombre().indexOf(parametro)!=-1){
-                resultado.add(it);
-
-            }
-
-        }
-        return resultado;
-    }
 
     public int getCount() {
         return count;
