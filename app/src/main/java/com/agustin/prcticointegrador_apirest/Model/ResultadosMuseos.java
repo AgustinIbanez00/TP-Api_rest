@@ -13,12 +13,7 @@ public class ResultadosMuseos {
     }
     public ResultadosMuseos(){}
 
-    public ArrayList<Museo> devolverResultado(String parametro){
-        ArrayList<Museo> resultado= new ArrayList<Museo>();
 
-
-        return resultado;
-    }
 
     public int getCount() {
         return count;
