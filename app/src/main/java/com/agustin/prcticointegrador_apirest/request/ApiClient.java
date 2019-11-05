@@ -2,6 +2,8 @@ package com.agustin.prcticointegrador_apirest.request;
 
 import android.util.Log;
 
+import com.agustin.prcticointegrador_apirest.Model.ListaMuseos;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -24,9 +26,7 @@ public class ApiClient {
 
     public interface MyApiInterface
     {
-        String prov = "74";
-//@GET("municipios?provincia=" + prov)
-//        Call<Resultado> leer();
+        Call<ListaMuseos> leer();
     }
 
 
