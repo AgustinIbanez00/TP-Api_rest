@@ -1,13 +1,12 @@
 package com.agustin.prcticointegrador_apirest.Request;
 
 import android.util.Log;
-
-import com.agustin.prcticointegrador_apirest.Model.ListaMuseos;
 import com.agustin.prcticointegrador_apirest.Model.ResultadosMuseos;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
 
 public class ApiClient {
     private static final String PATH = "https://www.cultura.gob.ar/api/v2.0/museos/";
