@@ -2,7 +2,7 @@ package com.agustin.prcticointegrador_apirest.Model;
 
 import java.util.ArrayList;
 
-public class ResultadosMuseos {
+public class ResultadosMuseos extends ViewModel {
 
     private int count;
     private ArrayList<Museo> results;

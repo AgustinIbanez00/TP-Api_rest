@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(ArrayList<Museo> museos) {
                 if(museos != null)
                 {
-
                    // Toast.makeText(getApplicationContext(), "Los museos han cambiado. C: " + museos.size(), Toast.LENGTH_LONG).show();
                     ArrayList<String> lista_nombres = new ArrayList<>();
 
@@ -58,9 +57,20 @@ public class MainActivity extends AppCompatActivity {
                             lista_nombres.add(m.getNombre());
                         }
                     }
+                    mainViewModel.agregarNombres(lista_nombres);
                     //Toast.makeText(getApplicationContext(), "Museos encontrados: " + lista_nombres.size()+ etBuscarMuseo.getText().toString(), Toast.LENGTH_LONG).show();
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.list_item, R.id.tvItem, lista_nombres);
+                }
+            }
+        });
+
+        mainViewModel.getListaNombres().observe(this, new Observer<ArrayList<String>>() {
+            @Override
+            public void onChanged(ArrayList<String> strings) {
+                if(strings != null)
+                {
+                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.list_item, R.id.tvItem, strings);
                     lvResultado.setAdapter(adapter);
+
                 }
             }
         });

@@ -19,8 +19,7 @@ import retrofit2.Response;
 public class MainViewModel extends ViewModel {
 
     private MutableLiveData<ArrayList<Museo>> listaMuseo;
-
-
+    private MutableLiveData<ArrayList<String>> nombres;
 
     public LiveData<ArrayList<Museo>> getListaMuseo(){
         if(listaMuseo == null){
@@ -29,6 +28,21 @@ public class MainViewModel extends ViewModel {
         }
         return listaMuseo;
     }
+
+    public LiveData<ArrayList<String>> getListaNombres()
+    {
+        if(nombres == null)
+        {
+            nombres = new MutableLiveData<>();
+        }
+        return nombres;
+    }
+
+    public void agregarNombres(ArrayList<String> nombres_list)
+    {
+        nombres.setValue(nombres_list);
+    }
+
 
     public void cargarMuseo(){
 
@@ -48,9 +62,8 @@ public class MainViewModel extends ViewModel {
                  Log.d("mensaje_error", t.getMessage());
              }
          });
-
-
     }
+
 }
 
 
