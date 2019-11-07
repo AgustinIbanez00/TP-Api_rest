@@ -1,5 +1,7 @@
 package com.agustin.prcticointegrador_apirest.Model;
 
+import androidx.lifecycle.ViewModel;
+
 import java.util.ArrayList;
 
 public class ResultadosMuseos extends ViewModel {
